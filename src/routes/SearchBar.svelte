@@ -2,10 +2,6 @@
 
   let {searchTerm = $bindable('')} = $props();
 
-  $effect(() => {
-    // TO DO: implement search logic here
-    console.log(`Searching for: ${searchTerm}`);
-  });
 </script>
 
 <input
