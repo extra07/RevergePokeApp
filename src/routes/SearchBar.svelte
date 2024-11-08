@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+  import PokemonApi from "./PokemonApi.svelte";
+
   let searchTerm = $state('');
 
   $effect(() => {
@@ -12,6 +14,8 @@
   bind:value={searchTerm}
   placeholder="Search..."
 />
+
+<PokemonApi bind:theSearchTerm={searchTerm} />
 
 <style>
   input[type="search"] {
