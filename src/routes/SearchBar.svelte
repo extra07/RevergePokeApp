@@ -1,7 +1,6 @@
 <script lang="ts">
-  import PokemonApi from "./PokemonApi.svelte";
 
-  let searchTerm = $state('');
+  let {searchTerm = $bindable('')} = $props();
 
   $effect(() => {
     // TO DO: implement search logic here
@@ -14,8 +13,6 @@
   bind:value={searchTerm}
   placeholder="Search..."
 />
-
-<PokemonApi bind:theSearchTerm={searchTerm} />
 
 <style>
   input[type="search"] {

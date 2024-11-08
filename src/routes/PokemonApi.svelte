@@ -1,6 +1,7 @@
 <script lang="ts">
+
     let data = $state(null);
-    let {theSearchTerm = $bindable('')} = $props();
+    let {theSearchTerm = $bindable(''), theFoundPokemon = $bindable({})} = $props();
 
     $effect(() => {
         console.log(data);
@@ -15,8 +16,10 @@
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${theSearchTerm}`);
             const jsonData = await response.json();
             data = jsonData;
+            theFoundPokemon = data;
         } catch (error) {
-            console.error(error);
+            // console.error(error);
         }
     }
 </script>
+
