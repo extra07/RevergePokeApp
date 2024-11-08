@@ -1,8 +1,10 @@
 <script lang="ts">
-   let { pokemonData } = $props();
+    let { pokemonData} = $props();
 
 </script>
 
 <textarea rows="20" cols="60" readonly>
-    {JSON.stringify(pokemonData)}
+
+        {JSON.stringify(pokemonData)}
+
 </textarea>
