@@ -9,6 +9,7 @@
 </script>
 <svelte:head>
     <title>Reverge PokeGG!</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
 </svelte:head>
 <h1>Welcome to Reverge PokeGG!</h1>
 <div class="search-container">
@@ -28,5 +29,10 @@
     }
     h1 {
         text-align: center;
+        font-family: 'Helvetica', sans-serif;
+        color: #d94575;
+    }
+    h2 {
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,roboto,Helvetica Neue,helvetica,arial,sans-serif;
     }
 </style>

@@ -8,7 +8,7 @@
 
     async function search(pokemon: unknown) {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${theSearchTerm}`);
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
             const jsonData = await response.json();
             theFoundPokemon = jsonData;
         } catch (error) {
