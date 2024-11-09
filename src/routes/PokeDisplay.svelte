@@ -44,6 +44,9 @@
 {/if}
 
 <style>
+    img {
+        margin-top: 10px;
+    }
     table {
         border-collapse: collapse;
         width: 100%;

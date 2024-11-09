@@ -4,7 +4,7 @@
     import SearchBar from "./SearchBar.svelte";
     import PokemonApi from "./PokemonApi.svelte";
 
-    let toFind = $state("pikachu");
+    let toFind = $state("charizard");
     let wasFound = $state(null);
 </script>
 <svelte:head>
