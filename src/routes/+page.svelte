@@ -5,7 +5,7 @@
     import PokemonApi from "./PokemonApi.svelte";
 
     let toFind = $state("charizard");
-    let wasFound = $state(null);
+    let wasFound = $state({});
 </script>
 <svelte:head>
     <title>Reverge PokeGG!</title>
@@ -15,7 +15,9 @@
 <div class="search-container">
     <h2>Current Search: {toFind}</h2>
     <SearchBar bind:searchTerm={toFind} />
+    {#if Object.keys(wasFound).length > 0}
     <PokeDisplay pokemonData={wasFound} />
+    {/if}
 </div>
 
 <PokemonApi bind:theSearchTerm={toFind} bind:theFoundPokemon={wasFound} />
